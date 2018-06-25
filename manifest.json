@@ -1,0 +1,88 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "saptools",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"dataSources": {
+            "tcodeService": {
+                "uri": "/jyang/saptools/data/services/library.xsodata/tcode/?$format=json",
+                "type": "json",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+	    "rootView": {
+			"viewName": "saptools.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.m": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "saptools.i18n.i18n"
+				}
+			},
+			"tcode": {
+			    "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "tcodeService"
+            }
+		},
+		"routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "saptools.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "overview",
+                    "target": "overview"
+                },
+                {
+                    "pattern": "detail/{tcodePath}",
+                    "name": "detail",
+                    "target": "detail"
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "viewID": "overview",
+                    "viewName": "Overview"
+                },
+                "detail": {
+                    "viewId": "detail",
+                    "viewName": "Detail"
+                }
+            }
+        }
+	}
+}

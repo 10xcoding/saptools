@@ -1,0 +1,129 @@
+{
+    "Tcodes": [
+        {
+            "TCode": "CMOD",
+            "Description": "Enhancements",
+            "Program": "Basis - Customer Enhancements"
+        },
+        {
+            "TCode": "FTXP",
+            "Description": "Maintain Tax code",
+            "Program": "FI - Basic Functions"
+        },
+        {
+            "TCode": "MIRO",
+            "Description": "Enter Incoming Invoice",
+            "Program": "MM - Invoice Verification"
+        },
+        {
+            "TCode": "MM01",
+            "Description": "Create Material &",
+            "Program": "Logistics - Material Master"
+        },
+        {
+            "TCode": "PB10",
+            "Description": "Init.entry of applicant master data",
+            "Program": "Personnel Mgmt - Recruitment"
+        },
+        {
+            "TCode": "PFCG",
+            "Description": "Role Maintenance",
+            "Program": "Basis - ABAP Authorization and Role Management"
+        },
+        {
+            "TCode": "SCOT",
+            "Description": "sapconnect - Administration",
+            "Program": "Basis - Communication Services: Mail; Fax; SMS; Telephony"
+        },
+        {
+            "TCode": "SE11",
+            "Description": "ABAP Dictionary Maintenance",
+            "Program": "Basis - Dictionary Maintenance"
+        },
+        {
+            "TCode": "SE16",
+            "Description": "Data Browser",
+            "Program": "Basis - Workbench Utilities"
+        },
+        {
+            "TCode": "SE37",
+            "Description": "ABAP Function Modules",
+            "Program": "Basis - Function Builder"
+        },
+        {
+            "TCode": "SE38",
+            "Description": "ABAP Editor",
+            "Program": "Basis - ABAP Editor"
+        },
+        {
+            "TCode": "SE71",
+            "Description": "sapscript form",
+            "Program": "Basis - SAPscript"
+        },
+        {
+            "TCode": "SE80",
+            "Description": "Object Navigator",
+            "Program": "Basis - Repository Browser"
+        },
+        {
+            "TCode": "SE93",
+            "Description": "Maintain transaction codes",
+            "Program": "Basis - Workbench Tools: Editors; Painters; Modelers"
+        },
+        {
+            "TCode": "SHD0",
+            "Description": "transaction and Screen Variants",
+            "Program": "Basis - Transaction Variant and Table Control Settings"
+        },
+        {
+            "TCode": "SICF",
+            "Description": "HTTP Service Hierarchy Maintenance",
+            "Program": "Basis - Internet Communication Framework"
+        },
+        {
+            "TCode": "SM30",
+            "Description": "Call View Maintenance",
+            "Program": "Basis - Table Maintenance Tool"
+        },
+        {
+            "TCode": "SM59",
+            "Description": "RFC Destinations (Display/Maintain)",
+            "Program": "Basis - RFC"
+        },
+        {
+            "TCode": "SMOD",
+            "Description": "sap Enhancement Management",
+            "Program": "Basis - Customer Enhancements"
+        },
+        {
+            "TCode": "SP01",
+            "Description": "Output Controller",
+            "Program": "Basis - Print and Output Management"
+        },
+        {
+            "TCode": "SPRO",
+            "Description": "Customizing - Edit Project",
+            "Program": "Basis - Customizing Project Management (IMG)"
+        },
+        {
+            "TCode": "SQ01",
+            "Description": "sap Query: Maintain queries",
+            "Program": "Basis - SAP Query"
+        },
+        {
+            "TCode": "SU01",
+            "Description": "User Maintenance",
+            "Program": "Basis - User and Authorization Management"
+        },
+        {
+            "TCode": "SWDC",
+            "Description": "Workflow Definition: Administration",
+            "Program": "Basis - SAP Business Workflow"
+        },
+        {
+            "TCode": "VA01",
+            "Description": "Create Sales Order",
+            "Program": "SD - Sales"
+        }
+    ]
+}

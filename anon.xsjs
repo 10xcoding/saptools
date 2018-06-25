@@ -1,0 +1,1 @@
+var conn = $.db.getConnection("saptools::anonuser");

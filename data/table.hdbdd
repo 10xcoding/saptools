@@ -1,0 +1,15 @@
+// CDS documents have the file suffix .hdbdd. 
+// Core data services (CDS) are a new infrastructure for defining 
+// and consuming semantically rich data model in SAP HANA.
+
+namespace jyang.saptools.data;   // define the package under which this file is created
+
+@Schema: 'JYANG'    // defines the schema under which the created table(s) would reside under
+
+context table {     // same as the file name before .hdbdd
+ 	Entity ttable {     // declares a table (entity)
+        key TCode: String(100) not null;
+        Description: String(300) not null default 'N/A';
+        Program: String(300) not null default 'N/A';
+    };
+};

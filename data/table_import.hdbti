@@ -1,0 +1,8 @@
+import = [
+            {
+                cdstable = "jyang.saptools.data::table.ttable";
+                schema = "JYANG";
+    			file = "jyang.saptools.data:ttable.csv"; 	     
+    			header = false;	
+		    }
+		 ];
