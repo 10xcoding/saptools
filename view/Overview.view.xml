@@ -6,5 +6,14 @@
 		<content>
 			<mvc:XMLView viewName="saptools.view.TcodeList"/>
 		</content>
+		<footer>
+			<Toolbar>
+				<Link
+                    class="myLink"
+            		text="10xCoding"
+            		target="_blank"
+            		href="https://www.10xcoding.com/" />
+			</Toolbar>
+		</footer>
 	</Page>
 </mvc:View>

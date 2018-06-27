@@ -1,28 +1,37 @@
 <mvc:View
     controllerName="saptools.controller.TcodeList"
     xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
     xmlns:mvc="sap.ui.core.mvc">
-    <Table
+    
+    <Toolbar
+        class="sapUiResponsiveMargin"
+        width="auto">
+		<Title text="{i18n>tcodeListTitle}"/>
+		<ToolbarSpacer/>
+		<SearchField width="60%" search="onFilterTcodes"/>
+	</Toolbar>
+	
+	<Table
         id="tcodeList"
         class="sapUiResponsiveMargin"
         width="auto"
-        items="{tcode>/d/results}" >
-        <headerToolbar>
-			<Toolbar>
-				<Title text="{i18n>tcodeListTitle}"/>
-				<ToolbarSpacer/>
-				<SearchField width="60%" search="onFilterTcodes"/>
-			</Toolbar>
-		</headerToolbar>
+        items="{tcode>/d/results}">
 		<columns>
-			<Column width="11em">
-				<Text text="{i18n>columnName}"/>
+			<Column id="code">
+				<Button 
+				    text="{i18n>columnName}"
+				    press="onSortCode"></Button>
 			</Column>
-			<Column width="25em">
-				<Text text="{i18n>columnDescription}"/>
+			<Column id="description">
+			    <Button 
+			        text="{i18n>columnDescription}"
+			        press="onSortDescription"></Button>
 			</Column>
-			<Column>
-				<Text text="{i18n>columnProgram}"/>
+			<Column id="program">
+			    <Button 
+			        text="{i18n>columnProgram}"
+			        press="onSortProgram"></Button>
 			</Column>
 		</columns>
 		<items>
@@ -37,4 +46,5 @@
 			</ColumnListItem>
 		</items>
     </Table>
+
 </mvc:View>

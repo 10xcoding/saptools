@@ -9,7 +9,7 @@ namespace jyang.saptools.data;   // define the package under which this file is 
 context table {     // same as the file name before .hdbdd
  	Entity ttable {     // declares a table (entity)
         key TCode: String(100) not null;
-        Description: String(300) not null default 'N/A';
-        Program: String(300) not null default 'N/A';
+        Description: String(1000);
+        Program: String(1000);
     };
 };

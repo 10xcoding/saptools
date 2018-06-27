@@ -11,7 +11,6 @@
     		    class="sapUiResponsiveMargin"
                 width="auto"
                 headerText="{tcode>TCode}">
-		
     		<Panel
     		    class="sapUiResponsiveMargin"
                 width="auto"
@@ -28,7 +27,16 @@
                     <Text id="codeProgram" text="{tcode>Program}" />
                 </content>
             </Panel>
-            
         </Panel>
+        <footer>
+			<Toolbar>
+				<Link
+                    class="myLink"
+            		text="10xCoding"
+            		target="_blank"
+            		href="https://www.10xcoding.com/" />
+			</Toolbar>
+		</footer>
 	</Page>
+
 </mvc:View>

@@ -7,7 +7,7 @@ sap.ui.define([
 	return Controller.extend("saptools.controller.Detail", {
 		onInit: function () {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
+			oRouter.getRoute("detail_name").attachPatternMatched(this._onObjectMatched, this);
 		},
 		_onObjectMatched: function (oEvent) {
             this.getView().bindElement({
