@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="WEBAPP.controller.Detail"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="{i18n>detailPageTitle}"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+	    
+	    <Panel
+    		    class="sapUiResponsiveMargin"
+                width="auto"
+                headerText="{tcode>TCode}">
+    		<Panel
+    		    class="sapUiResponsiveMargin"
+                width="auto"
+                headerText="Description">
+                <content>
+                    <Text id="codeDescription" text="{tcode>Description}" />
+                </content>
+            </Panel>
+            <Panel
+                class="sapUiResponsiveMargin"
+                width="auto"
+                headerText="Program">
+                <content>
+                    <Text id="codeProgram" text="{tcode>Program}" />
+                </content>
+            </Panel>
+        </Panel>
+        <footer>
+			<Toolbar>
+				<Link
+                    class="myLink"
+            		text="10xCoding"
+            		target="_blank"
+            		href="https://www.10xcoding.com/" />
+			</Toolbar>
+		</footer>
+	</Page>
+
+</mvc:View>

@@ -1,0 +1,3 @@
+service namespace "SAPTOOLS.BACKEND.services" {
+	"SAPTOOLS.BACKEND.data::table.ttable" as "tcode";
+}

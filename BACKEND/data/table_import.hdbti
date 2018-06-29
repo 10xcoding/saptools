@@ -1,0 +1,9 @@
+import = [
+            {
+                cdstable = "SAPTOOLS.BACKEND.data::table.ttable";
+                schema = "SAPTOOLS";
+    			file = "SAPTOOLS.BACKEND.data:tcodes.txt"; 	     
+    			header = false;	
+    			delimField = "\t";
+		    }
+		 ];

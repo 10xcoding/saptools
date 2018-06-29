@@ -1,3 +1,0 @@
-service namespace "jyang.saptools.services" {
-	"jyang.saptools.data::table.ttable" as "tcode";
-}

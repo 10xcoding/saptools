@@ -1,0 +1,95 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "WEBAPP",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"dataSources": {
+            "tcodeService": {
+                "uri": "/SAPTOOLS/BACKEND/data/services/library.xsodata/tcode/?$format=json",
+                "type": "json",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+	    "rootView": {
+			"viewName": "WEBAPP.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.m": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "WEBAPP.i18n.i18n"
+				}
+			},
+			"tcode": {
+			    "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "tcodeService"
+            }
+		},
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+		"routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "WEBAPP.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "name": "overview",
+                    "pattern": "",
+                    "target": "overview"
+                },
+                {
+                    "name": "detail_name",
+                    "pattern": "detail_url/{tcodePath}",
+                    "target": "detail_target"
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "viewId": "overview",
+                    "viewName": "Overview" 
+                },
+                "detail_target": {
+                    "viewId": "detail_nothing_related_right_now",
+                    "viewName": "Detail"
+                }
+            }
+        }
+	}
+}

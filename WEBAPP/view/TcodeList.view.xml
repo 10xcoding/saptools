@@ -1,0 +1,50 @@
+<mvc:View
+    controllerName="WEBAPP.controller.TcodeList"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc">
+    
+    <Toolbar
+        class="sapUiResponsiveMargin"
+        width="auto">
+		<Title text="{i18n>tcodeListTitle}"/>
+		<ToolbarSpacer/>
+		<SearchField width="60%" search="onFilterTcodes"/>
+	</Toolbar>
+	
+	<Table
+        id="tcodeList"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{tcode>/d/results}">
+		<columns>
+			<Column id="code">
+				<Button 
+				    text="{i18n>columnName}"
+				    press="onSortCode"></Button>
+			</Column>
+			<Column id="description">
+			    <Button 
+			        text="{i18n>columnDescription}"
+			        press="onSortDescription"></Button>
+			</Column>
+			<Column id="program">
+			    <Button 
+			        text="{i18n>columnProgram}"
+			        press="onSortProgram"></Button>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem
+				type="Navigation"
+				press="onPress">
+				<cells>
+					<Text text="{tcode>TCode}"/>
+					<Text text="{tcode>Description}"/>
+					<Text text="{tcode>Program}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+    </Table>
+
+</mvc:View>
